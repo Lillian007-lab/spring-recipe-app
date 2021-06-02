@@ -18,8 +18,6 @@ public class Recipe {
     private String url;
     private String directions;
 
-    // private Difficulty difficulty;
-
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
     private Set<Ingredient> ingredients;
 
