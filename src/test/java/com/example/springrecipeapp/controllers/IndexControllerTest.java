@@ -2,8 +2,9 @@ package com.example.springrecipeapp.controllers;
 
 import com.example.springrecipeapp.domain.Recipe;
 import com.example.springrecipeapp.services.RecipeService.RecipeService;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+
+import org.junit.Before;
+import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -14,13 +15,13 @@ import org.springframework.ui.Model;
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
-class IndexControllerTest {
+public class IndexControllerTest {
 
     @Mock
     RecipeService recipeService;
@@ -30,8 +31,8 @@ class IndexControllerTest {
 
     IndexController controller;
 
-    @BeforeEach
-    void setUp() throws Exception{
+    @Before
+    public void setUp() throws Exception{
         MockitoAnnotations.openMocks(this);
         controller = new IndexController(recipeService);
     }
@@ -46,7 +47,7 @@ class IndexControllerTest {
     }
 
     @Test
-    void getIndexPage() throws Exception{
+    public void getIndexPage() throws Exception{
 
         // given
         Set<Recipe> recipes = new HashSet<>();

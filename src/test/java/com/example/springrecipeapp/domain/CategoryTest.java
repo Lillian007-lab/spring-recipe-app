@@ -1,23 +1,25 @@
 package com.example.springrecipeapp.domain;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-class CategoryTest {
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+
+public class CategoryTest {
 
     Category category;
 
-    @BeforeEach
+    @Before
     public void setUp(){
         category = new Category();
     }
 
 
     @Test
-    void getId() throws Exception{
+    public void getId() throws Exception{
         Long idValue = 2L;
         category.setId(idValue);
         assertEquals(idValue, category.getId());
@@ -25,10 +27,10 @@ class CategoryTest {
     }
 
     @Test
-    void getDescription() throws Exception{
+    public void getDescription() throws Exception{
     }
 
     @Test
-    void getRecipes() throws  Exception{
+    public void getRecipes() throws  Exception{
     }
 }
