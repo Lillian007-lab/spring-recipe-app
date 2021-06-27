@@ -5,9 +5,7 @@ import com.example.springrecipeapp.converters.RecipeCommandToRecipe;
 import com.example.springrecipeapp.converters.RecipeToRecipeCommand;
 import com.example.springrecipeapp.domain.Recipe;
 import com.example.springrecipeapp.repositories.RecipeRepository;
-import com.example.springrecipeapp.services.RecipeService.RecipeService;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.catalina.filters.RemoteCIDRFilter;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

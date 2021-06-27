@@ -1,7 +1,8 @@
 package com.example.springrecipeapp.controllers;
 
 import com.example.springrecipeapp.commands.RecipeCommand;
-import com.example.springrecipeapp.services.RecipeService.RecipeService;
+import com.example.springrecipeapp.services.IngredientService;
+import com.example.springrecipeapp.services.RecipeService;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -16,6 +17,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 
 public class IngredientControllerTest {
+
+    @Mock
+    IngredientService ingredientService;
+
     @Mock
     RecipeService recipeService;
 
@@ -27,7 +32,7 @@ public class IngredientControllerTest {
     public void setUp() throws Exception {
         MockitoAnnotations.openMocks(this);
 
-        controller = new IngredientController(recipeService);
+        controller = new IngredientController(recipeService, ingredientService);
         mockMvc = MockMvcBuilders.standaloneSetup(controller).build();
     }
 

@@ -1,7 +1,7 @@
 package com.example.springrecipeapp.controllers;
 
 import com.example.springrecipeapp.commands.RecipeCommand;
-import com.example.springrecipeapp.services.RecipeService.RecipeService;
+import com.example.springrecipeapp.services.RecipeService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

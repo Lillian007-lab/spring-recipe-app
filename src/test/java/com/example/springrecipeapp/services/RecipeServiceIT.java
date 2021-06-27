@@ -5,7 +5,6 @@ import com.example.springrecipeapp.converters.RecipeCommandToRecipe;
 import com.example.springrecipeapp.converters.RecipeToRecipeCommand;
 import com.example.springrecipeapp.domain.Recipe;
 import com.example.springrecipeapp.repositories.RecipeRepository;
-import com.example.springrecipeapp.services.RecipeService.RecipeService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

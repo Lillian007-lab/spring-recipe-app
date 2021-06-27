@@ -1,7 +1,7 @@
 package com.example.springrecipeapp.controllers;
 
 import com.example.springrecipeapp.domain.Recipe;
-import com.example.springrecipeapp.services.RecipeService.RecipeService;
+import com.example.springrecipeapp.services.RecipeService;
 
 
 import org.junit.jupiter.api.BeforeEach;

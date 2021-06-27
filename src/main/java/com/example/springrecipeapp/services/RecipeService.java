@@ -1,4 +1,4 @@
-package com.example.springrecipeapp.services.RecipeService;
+package com.example.springrecipeapp.services;
 
 import com.example.springrecipeapp.commands.RecipeCommand;
 import com.example.springrecipeapp.domain.Recipe;
