@@ -18,14 +18,13 @@
             th:href="@{/webjars/bootstrap/5.0.1/jss/bootstrap.min.js}"></script>
 </head>
 <body>
+<!--/*@thymesVar id="recipe" type="com.example.springrecipeapp.domain.Recipe"*/-->
 <div class="container-fluid" style="margin-top: 20px">
     <div class="justify-content-center">
         <div class="col-md-6 offset-md-3">
             <div class="card-group">
                 <div class="card mb-3">
                     <div class="card-header bg-primary text-light mb-3">
-                        <!--/*@thymesVar id="recipe" type="com.example.springrecipeapp.domain.Recipe"*/-->
-
                         <h1 class="card-title" th:text="${recipe.description}">Recipe Description Here!</h1>
                     </div>
                     <div class="card-body">
@@ -37,8 +36,6 @@
                                 <ul>
                                     <li th:remove="all">cat one</li>
                                     <li th:remove="all">cat two</li>
-                                    <!--/*@thymesVar id="recipe" type="com.example.springrecipeapp.domain.Recipe"*/-->
-
                                     <li th:each="category : ${recipe.categories}" th:text="${category.getDescription()}">cat three</li>
                                 </ul>
                             </div>
