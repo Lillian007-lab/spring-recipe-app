@@ -26,7 +26,7 @@ public class ImageServiceImplTest {
 
     @Before
     public void setUp() throws Exception {
-        MockitoAnnotations.initMocks(this);
+        MockitoAnnotations.openMocks(this);
 
         imageService = new ImageServiceImpl(recipeRepository);
     }
@@ -35,8 +35,8 @@ public class ImageServiceImplTest {
     public void saveImageFile() throws IOException {
         //given
         Long id = 1L;
-        MultipartFile multipartFile = new MockMultipartFile("imagefile", "testing.txt", "text/plain",
-                "Spring Framework Guru".getBytes());
+        MultipartFile multipartFile = new MockMultipartFile("imagefile", "testing.txt",
+                "text/plain", "Spring Framework Guru".getBytes());
 
         Recipe recipe = new Recipe();
         recipe.setId(id);
